@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sistema de Caja Chica</title>
+  </head>
+  <body>
+    <h1>Sistema de Caja Chica</h1>
+    <h2>Saldo: <span id="saldo">$0.00</span></h2>
+
+    <form id="movimientoForm">
+      <input type="number" id="monto" placeholder="Monto" required />
+      <select id="tipo">
+        <option value="ingreso">Ingreso</option>
+        <option value="egreso">Egreso</option>
+      </select>
+      <input type="text" id="descripcion" placeholder="Descripción" required />
+      <button type="submit">Agregar Movimiento</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Descripción</th>
+          <th>Tipo</th>
+          <th>Monto</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="tablaMovimientos"></tbody>
+    </table>
+
+    <button id="descargarReporte">Descargar Reporte</button>
+    <script src="script.js"></script>
+  </body>
+</html>
